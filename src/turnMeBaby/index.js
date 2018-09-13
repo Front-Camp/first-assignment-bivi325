@@ -8,7 +8,12 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  /* your logic here...*/
+  let arr = str.split(" ");
+  for(let i = 0; i < arr.length; i++){
+    arr[i] = arr[i].split('').reverse().join('');
+  }
+  arr = arr.reverse().join(' ');
+  return arr;
 };
 
 export default turnMeBaby;

@@ -1,3 +1,5 @@
+import { isArray } from "util";
+
 /**
  * This function should return "true" only for "Object" type
  * @param {any} data - this can be any value: string, number, array, object, etc.
@@ -8,7 +10,7 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  /* your logic here...*/
+  return data !== null && !Array.isArray(data) && typeof data === 'object';
 };
 
 export default isObject;
